@@ -15,7 +15,7 @@
 
 #### Reference picture
 ![Reference picture](images/Reference_pic.png)
-### Dynamic Lighting：The Three.js example uses RectAreaLight to create soft, even illumination, simulating neon signs crucial for the cyberpunk aesthetic.
+### Dynamic LightingThe: Three.js example uses RectAreaLight to create soft, even illumination, simulating neon signs crucial for the cyberpunk aesthetic.
 ### Highlighting Details: Positioning the light strategically enhances the visibility of intricate textures on robots and creatures, making them stand out against darker backgrounds.
 ### Complex Setup: Combining RectAreaLight with other light types (e.g., point and ambient lights) adds depth and realism to the scene.
 ### User Interaction: Dynamically adjusting light properties based on user interactions enhances immersion.
