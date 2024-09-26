@@ -11,9 +11,10 @@
 
 ## Part 2: Exploring Coding Techniques
 
-### I chose to use the help of Three.js to create dynamic scenes with a sense of depth and light effects. ·  Dynamic Lighting: The Three.js example uses RectAreaLight to create soft, even illumination, simulating neon signs crucial for the cyberpunk aesthetic.
-#### Reference picture
+### I chose to use the help of Three.js to create dynamic scenes with a sense of depth and light effects.
 ![Reference picture](images/Reference_pic.png)
+### Dynamic Lighting：The Three.js example uses RectAreaLight to create soft, even illumination, simulating neon signs crucial for the cyberpunk aesthetic.
+#### Reference picture
 
 #### Highlighting Details: Positioning the light strategically enhances the visibility of intricate textures on robots and creatures, making them stand out against darker backgrounds.
 #### Complex Setup: Combining RectAreaLight with other light types (e.g., point and ambient lights) adds depth and realism to the scene.
