@@ -16,8 +16,9 @@
 ![Reference picture](images/Reference_pic.png)
 
 #### Highlighting Details: Positioning the light strategically enhances the visibility of intricate textures on robots and creatures, making them stand out against darker backgrounds.
-##### Complex Setup: Combining RectAreaLight with other light types (e.g., point and ambient lights) adds depth and realism to the scene.
-##### User Interaction: Dynamically adjusting light properties based on user interactions enhances immersion.
-###### To explore the code and see the project in action, visit the following link:
+#### Complex Setup: Combining RectAreaLight with other light types (e.g., point and ambient lights) adds depth and realism to the scene.
+#### User Interaction: Dynamically adjusting light properties based on user interactions enhances immersion.
+#### To explore the code and see the project in action, visit the following link:
+
 
 [Project Reference Link](https://gist.github.com/NeonBlueWS/fde2da512a61e2c55c00c4b8825f9705)
