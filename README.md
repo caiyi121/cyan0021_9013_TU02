@@ -6,13 +6,13 @@
 ### 1. Variable Declarations
 
 #### Variable Declarations
-![Images 1]（assets/1.png）
+![Images 1](assets/1.png)
 
 ##### - cloudImage:This variable will store the image of the clouds.
 ##### - birdMask: This is a graphics object (off-screen canvas) used to create the dove shape which will act as a mask on the cloud image.
 ##### - xOffset and yOffset: These are used to control the smooth horizontal and vertical movement of the clouds using Perlin noise.
 #### - Preloading the Cloud Image
-![Images 2 ][]
+![Images 2 ](assets/2.png)
 
 ## Part 2: Exploring Coding Techniques
 
