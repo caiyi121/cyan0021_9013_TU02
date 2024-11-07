@@ -1,8 +1,8 @@
 ## Time-based animation
-####    In this project, I used time-based animation techniques to control changes in the animation, specifically through timers and events. By constantly updating the time (e.g. using frameCount and the sin(),cos() functions), I made the elements in the scene (e.g. clouds, stars, etc.) change smoothly over time, thus creating a smooth dynamic effect.
+In this project, I used time-based animation techniques to control changes in the animation, specifically through timers and events. By constantly updating the time (e.g. using frameCount and the sin(),cos() functions), I made the elements in the scene (e.g. clouds, stars, etc.) change smoothly over time, thus creating a smooth dynamic effect.
 
 ## Interactive Description:
-####    The user can interact with this project by moving the mouse. As the mouse is moved, the transparency and position of the clouds change based on the Y coordinate of the mouse. Specifically, the vertical position of the mouse (i.e. mouseY ) affects the transparency of the cloud, with the cloud becoming more opaque near the top and more transparent near the bottom. At the same time, the position of the cloud will show a sinusoidal fluctuation effect according to the time change, giving a feeling of floating and flowing.
+The user can interact with this project by moving the mouse. As the mouse is moved, the transparency and position of the clouds change based on the Y coordinate of the mouse. Specifically, the vertical position of the mouse (i.e. mouseY ) affects the transparency of the cloud, with the cloud becoming more opaque near the top and more transparent near the bottom. At the same time, the position of the cloud will show a sinusoidal fluctuation effect according to the time change, giving a feeling of floating and flowing.
 
 ## Animation details:
 ###  - Clouds: 
