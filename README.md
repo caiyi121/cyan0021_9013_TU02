@@ -14,13 +14,13 @@
 
 ### 2. Preloading the Cloud Image
 
-![Images 2 ](.assets/2.png)
+![Images 2 ](assets/2.png)
 
 ##### - The preload() function is used to load the clouds.jpg image before the sketch begins. This ensures that the image is fully loaded and available to be used in the rest of the code.
 
 ### 3. Setup Function
 
-![Images 3 ](.assets/3.png)
+![Images 3 ](assets/.png)
 
 #### - createCanvas(windowWidth, windowHeight) creates a canvas that spans the entire width and height of the browser window.
 #### - createGraphics(500, 400) creates an off-screen graphics object (birdMask) with a fixed size of 500x400 pixels.
@@ -28,9 +28,9 @@
 #### - cloudImage.mask(birdMask) applies the dove shape as a mask on the cloudImage, meaning the cloud image will be visible only in the shape of the dove.
 
 ### 4. Draw Function
-![Images 3 ](.assets/3.png)
+![Images 4 ](assets/4.png)
 
-![Images 3 ](.assets/Reference_pic.png)
+![Images 3 ](assets/Reference_pic.png)
 #### - background(0, 100, 200) sets the background color to a blue shade.
 #### - xMove and yMove are calculated using Perlin noise (noise(xOffset) and noise(yOffset)), which generates smooth, gradual random values for the movement of the cloud image. The map() function maps these values into a desired range for horizontal (-20 to 20) and vertical (-10 to 10) movement.
 #### - xOffset and yOffset are incremented each frame (+= 0.01) to animate the cloud movement smoothly.
