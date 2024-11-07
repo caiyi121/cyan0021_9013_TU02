@@ -2,11 +2,11 @@
 
 ## Personal Part: Perlin noise and randomness
 
-![Images 0](.assets/clouds.jpg)
+![Images 0](assets/clouds.jpg)
 
 ### 1. Variable Declarations
 
-![Images 1](.assets/1.png)
+![Images 1](assets/1.png)
 
 ##### - cloudImage:This variable will store the image of the clouds.
 ##### - birdMask: This is a graphics object (off-screen canvas) used to create the dove shape which will act as a mask on the cloud image.
@@ -30,7 +30,7 @@
 ### 4. Draw Function
 ![Images 4 ](assets/4.png)
 
-![Images 3 ](assets/Reference_pic.png)
+
 #### - background(0, 100, 200) sets the background color to a blue shade.
 #### - xMove and yMove are calculated using Perlin noise (noise(xOffset) and noise(yOffset)), which generates smooth, gradual random values for the movement of the cloud image. The map() function maps these values into a desired range for horizontal (-20 to 20) and vertical (-10 to 10) movement.
 #### - xOffset and yOffset are incremented each frame (+= 0.01) to animate the cloud movement smoothly.
