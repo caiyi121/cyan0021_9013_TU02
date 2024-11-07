@@ -4,17 +4,19 @@
 ![Cloud Image](clouds.jpg)
 
 ### 1. Variable Declarations
+![ Image 1 ](1.png)
 
 ##### - cloudImage:This variable will store the image of the clouds.
 ##### - birdMask: This is a graphics object (off-screen canvas) used to create the dove shape which will act as a mask on the cloud image.
 ##### - xOffset and yOffset: These are used to control the smooth horizontal and vertical movement of the clouds using Perlin noise.
 
 ### 2. Preloading the Cloud Image
-
+![ Image 2 ](2.png)
 
 ##### - The preload() function is used to load the clouds.jpg image before the sketch begins. This ensures that the image is fully loaded and available to be used in the rest of the code.
 
 ### 3. Setup Function
+![ Image 3 ](3.png)
 
 #### - createCanvas(windowWidth, windowHeight) creates a canvas that spans the entire width and height of the browser window.
 #### - createGraphics(500, 400) creates an off-screen graphics object (birdMask) with a fixed size of 500x400 pixels.
@@ -22,6 +24,7 @@
 #### - cloudImage.mask(birdMask) applies the dove shape as a mask on the cloudImage, meaning the cloud image will be visible only in the shape of the dove.
 
 ### 4. Draw Function
+![ Image 4 ](4.png)
 
 #### - background(0, 100, 200) sets the background color to a blue shade.
 #### - xMove and yMove are calculated using Perlin noise (noise(xOffset) and noise(yOffset)), which generates smooth, gradual random values for the movement of the cloud image. The map() function maps these values into a desired range for horizontal (-20 to 20) and vertical (-10 to 10) movement.
