@@ -1,7 +1,7 @@
 # Creative coding major project
 
 ## Personal Part: Perlin noise and randomness
-![Cloud Image](assets/clouds.jpg)
+![Cloud Image](clouds.jpg)
 
 ### 1. Variable Declarations
 
