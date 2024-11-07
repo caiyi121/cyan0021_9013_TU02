@@ -1,19 +1,17 @@
 # Creative coding major project
 
-## Part 1: Step-by-Step Breakdown of the Code
+## Personal Part: Perlin noise and randomness
 
 ### 1. Variable Declarations
 
-#### Images 1
-![picture](images/1.png)
+#### Variable Declarations
+![Images 1](assets/1.png)
 
-#### cloudImage:
-This variable will store the image of the clouds.
-#### birdMask: 
-This is a graphics object (off-screen canvas) used to create the dove shape which will act as a mask on the cloud image.
-xOffset and yOffset: These are used to control the smooth horizontal and vertical movement of the clouds using Perlin noise.
-#### Images 2
-![Robots made up of TVs in Stray, creating an atmosphere of mystery and technology.](images/robots_tvs.png)
+##### cloudImage:This variable will store the image of the clouds.
+##### birdMask: This is a graphics object (off-screen canvas) used to create the dove shape which will act as a mask on the cloud image.
+##### xOffset and yOffset: These are used to control the smooth horizontal and vertical movement of the clouds using Perlin noise.
+#### Preloading the Cloud Image
+![Images 2 ](assets/1.png)
 
 ## Part 2: Exploring Coding Techniques
 
