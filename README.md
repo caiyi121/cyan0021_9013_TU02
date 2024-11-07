@@ -1,50 +1,21 @@
-# Creative coding major project
+# Time-based animation:
+## In this project, I used time-based animation techniques to control changes in the animation, specifically through timers and events. By constantly updating the time (e.g. using frameCount and the sin(),cos() functions), I made the elements in the scene (e.g. clouds, stars, etc.) change smoothly over time, thus creating a smooth dynamic effect.
 
-## Personal Part: Perlin noise and randomness
-![Cloud Image](clouds.jpg)
+# Interactive Description:
+## The user can interact with this project by moving the mouse. As the mouse is moved, the transparency and position of the clouds change based on the Y coordinate of the mouse. Specifically, the vertical position of the mouse (i.e. mouseY ) affects the transparency of the cloud, with the cloud becoming more opaque near the top and more transparent near the bottom. At the same time, the position of the cloud will show a sinusoidal fluctuation effect according to the time change, giving a feeling of floating and flowing.
 
-### 1. Variable Declarations
-![ Image 1 ](1.png)
+# Animation details:
+## - Clouds: The movement of the clouds is realized through the sin() and cos() functions, which are dynamically updated according to time, creating a smooth, periodic movement of the clouds. This time-driven motion gives the clouds a natural, smooth floating effect.
+## - Stars: The stars in the background twinkle over time. By varying the size of the stars through sin(frameCount * speed) based on time, a twinkling effect is created that simulates the fluctuation of the stars in the night sky.
+## - Dove Mask: A dove shape is applied to the mask of the cloud image, allowing the movement of the clouds to be combined with a dove pattern. This mask effect is created in a separate Graphics object and applied to the cloud image via cloudImage.mask(birdMask), causing parts of the cloud to form the outline of a dove.
 
-##### - cloudImage:This variable will store the image of the clouds.
-##### - birdMask: This is a graphics object (off-screen canvas) used to create the dove shape which will act as a mask on the cloud image.
-##### - xOffset and yOffset: These are used to control the smooth horizontal and vertical movement of the clouds using Perlin noise.
+# Animation tips:
+## - Time-based animation: Use the sin() and cos() functions to control the motion of the clouds and stars. sin() is used to control the horizontal and vertical motion of the clouds, while cos() ensures that the vertical motion of the clouds is synchronized with the horizontal direction. For the stars, the sin() function controls the size of the stars, which gives them a twinkling effect and adds dynamism to the background.
 
-### 2. Preloading the Cloud Image
-![ Image 2 ](2.png)
+## - Gradient background: The background color is created by the lerpColor() function, which creates a gradient effect that smoothly transitions from one color to another based on the position of each scan line. This time-based gradient effect makes the image richer and more layered.
 
-##### - The preload() function is used to load the clouds.jpg image before the sketch begins. This ensures that the image is fully loaded and available to be used in the rest of the code.
+# Team Member Differences:
+## For this project, I focused primarily on the implementation of the cloud motion, star twinkle, and dove mask effects. These elements add interactivity to the animation, especially the movement and transparency of the clouds, the twinkling of the stars, and the masking of the dove shape. Other team members may have focused more on other aspects such as color changes or control of component visibility, possibly implementing trigger events or reveal and hide effects for elements.
 
-### 3. Setup Function
-![ Image 3 ](3.png)
-
-#### - createCanvas(windowWidth, windowHeight) creates a canvas that spans the entire width and height of the browser window.
-#### - createGraphics(500, 400) creates an off-screen graphics object (birdMask) with a fixed size of 500x400 pixels.
-#### - drawDove(birdMask) is called to draw the dove shape on this off-screen canvas.
-#### - cloudImage.mask(birdMask) applies the dove shape as a mask on the cloudImage, meaning the cloud image will be visible only in the shape of the dove.
-
-### 4. Draw Function
-![ Image 4 ](4.png)
-
-#### - background(0, 100, 200) sets the background color to a blue shade.
-#### - xMove and yMove are calculated using Perlin noise (noise(xOffset) and noise(yOffset)), which generates smooth, gradual random values for the movement of the cloud image. The map() function maps these values into a desired range for horizontal (-20 to 20) and vertical (-10 to 10) movement.
-#### - xOffset and yOffset are incremented each frame (+= 0.01) to animate the cloud movement smoothly.
-#### - cloudOpacity adjusts the transparency of the cloud image based on the vertical position of the mouse (mouseY). As the mouse moves down the screen, the clouds become more opaque.
-#### - scaleFactor calculates the scaling factor to ensure the dove shape fits proportionally within the canvas size, keeping it centered and scaled correctly.
-#### - image(cloudImage, ...) draws the cloud image on the canvas, with adjustments for opacity, position, and scaling.
-
-### 5. Drawing the Dove Shape
-![ Image 5 ](5.png)
-#### -This function draws the dove shape on the pg graphics object (birdMask).
-#### -The dove is drawn using Bezier curves (bezierVertex), which are useful for creating smooth, flowing lines. The coordinates provided in the vertex() and bezierVertex() functions define the shape of the dove's body, wings, head, and tail.
-#### -beginShape() and endShape(CLOSE) start and end the shape, respectively, with CLOSE making sure the path is closed to form a complete dove.
-#### -The tail of the dove is drawn in a separate shape at the end.
-
-### 6. Handling Window Resize
-![ Image 6 ](6.png)
-#### - This function ensures that the canvas size is updated whenever the window is resized, so the sketch will adjust dynamically to fit the new window dimensions.
-
-Technical reference sources used:
-p5.js. “map() Function.” p5.js Reference.[https://p5js.org/reference/#/p5/map]
-
-[def]: assets/clouds.jpg
+# Inspiration
+## The visual inspiration for this project came primarily from cloud images and dove shapes. I wanted to combine the soft, flowing feel of the clouds with the serene image of the dove to create an image that is both dynamic and quiet. The dove shape was inspired by minimalist bird designs, while the clouds referenced simple textured cloud images that can be used as mask images.

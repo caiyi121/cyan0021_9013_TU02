@@ -1,7 +1,8 @@
 let cloudImage;
 let birdMask;
-let xOffset = 0; // Perlin noise offset for the horizontal movement of clouds
-let yOffset = 0; // Perlin noise offset for the vertical movement of clouds
+let cloudMoveSpeed = 0.5; // Controls the speed of cloud movement
+let cloudMoveDirection = 1; // Controls the direction of cloud movement
+let stars = []; // To store star objects
 
 function preload() {
   cloudImage = loadImage('./assets/clouds.jpg'); // Load cloud image
@@ -15,22 +16,26 @@ function setup() {
 
   drawDove(birdMask); // Draw the dove shape on the mask
   cloudImage.mask(birdMask); // Apply the dove shape as a mask to the cloud image
+
+  // Initialize stars
+  for (let i = 0; i < 100; i++) {
+    stars.push(new Star());
+  }
 }
 
 function draw() {
   background(0, 100, 200); // Set background color
 
-  // Use Perlin noise to smoothly control the cloud movement
-  let xMove = map(noise(xOffset), 0, 1, -20, 20); // Horizontal drift range
-  let yMove = map(noise(yOffset), 0, 1, -10, 10); // Vertical drift range
+  // Add gradient effect
+  drawGradientBackground();
 
-  // Update offsets to make the clouds move gradually
-  xOffset += 0.01;
-  yOffset += 0.01;
+  // Use time-based animation, update cloud position at fixed intervals
+  let xMove = sin(frameCount * cloudMoveSpeed) * 20 * cloudMoveDirection; // Horizontal drift range
+  let yMove = cos(frameCount * cloudMoveSpeed) * 10 * cloudMoveDirection; // Vertical drift range
 
-  // Dynamically adjust cloud opacity based on the mouse's vertical position
+  // Dynamically adjust cloud opacity based on mouse vertical position
   let cloudOpacity = map(mouseY, 0, height, 100, 255);
-  tint(255, cloudOpacity); // Set the cloud image opacity
+  tint(255, cloudOpacity); // Set cloud image opacity
 
   // Calculate scaling factor to ensure the dove stays proportional and fits the screen
   let scaleFactor = min(width / 500, height / 400);
@@ -39,13 +44,19 @@ function draw() {
   let imgWidth = 500 * scaleFactor;
   let imgHeight = 400 * scaleFactor;
   image(cloudImage, width / 2 - imgWidth / 2 + xMove, height / 2 - imgHeight / 2 + yMove, imgWidth, imgHeight);
+
+  // Draw stars
+  for (let star of stars) {
+    star.update();
+    star.show();
+  }
 }
 
 function drawDove(pg) {
   pg.fill(255); // Fill with white for the mask
   pg.noStroke();
-  
-  // Draw the dove shape using Bezier curves
+
+  // Use Bezier curves to draw the dove shape
   pg.beginShape();
   pg.vertex(200, 150);
   pg.bezierVertex(172, 141, 160, 74, 73, 3); // Top wing
@@ -59,7 +70,7 @@ function drawDove(pg) {
   pg.bezierVertex(322, 96, 487, 89, 291, 74); // Wing curve
   pg.bezierVertex(212, 57, 164, 165, 197, 155); // Wing returning to head
   pg.endShape(CLOSE);
-  
+
   // Dove's tail section
   pg.beginShape();
   pg.vertex(239, 296);
@@ -69,7 +80,38 @@ function drawDove(pg) {
   pg.endShape(CLOSE);
 }
 
-// Dynamically adjust the canvas size
+// Add gradient background
+function drawGradientBackground() {
+  for (let i = 0; i < height; i++) {
+    let inter = map(i, 0, height, 0, 1);
+    let c = lerpColor(color(0, 100, 200), color(255, 150, 50), inter);
+    stroke(c);
+    line(0, i, width, i);
+  }
+}
+
+// Star class
+class Star {
+  constructor() {
+    this.x = random(width);
+    this.y = random(height);
+    this.size = random(1, 3);
+    this.speed = random(0.5, 1.5); // Speed of star's flicker
+  }
+
+  update() {
+    // The size of the star changes over time to simulate flickering
+    this.size = map(sin(frameCount * this.speed), -1, 1, 1, 3);
+  }
+
+  show() {
+    noStroke();
+    fill(255, 255, 255, 150); // Set the color of stars
+    ellipse(this.x, this.y, this.size, this.size); // Draw star
+  }
+}
+
+// Dynamically adjust canvas size
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
