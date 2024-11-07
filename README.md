@@ -1,30 +1,32 @@
 # Creative coding major project
 
 ## Personal Part: Perlin noise and randomness
+
 ![Images 0](assets/clouds.jpg)
 
 ### 1. Variable Declarations
 
-#### Variable Declarations
 ![Images 1](assets/1.png)
 
 ##### - cloudImage:This variable will store the image of the clouds.
 ##### - birdMask: This is a graphics object (off-screen canvas) used to create the dove shape which will act as a mask on the cloud image.
 ##### - xOffset and yOffset: These are used to control the smooth horizontal and vertical movement of the clouds using Perlin noise.
-#### - Preloading the Cloud Image
+
+### 2. Preloading the Cloud Image
+
 ![Images 2 ](assets/2.png)
 
-## Part 2: Exploring Coding Techniques
+##### - The preload() function is used to load the clouds.jpg image before the sketch begins. This ensures that the image is fully loaded and available to be used in the rest of the code.
 
-### I chose to use the help of Three.js to create dynamic scenes with a sense of depth and light effects.
+### 3. Setup Function
 
-#### Reference picture
-![Reference picture]
-### Dynamic LightingThe: Three.js example uses RectAreaLight to create soft, even illumination, simulating neon signs crucial for the cyberpunk aesthetic.
-### Highlighting Details: Positioning the light strategically enhances the visibility of intricate textures on robots and creatures, making them stand out against darker backgrounds.
-### Complex Setup: Combining RectAreaLight with other light types (e.g., point and ambient lights) adds depth and realism to the scene.
-### User Interaction: Dynamically adjusting light properties based on user interactions enhances immersion.
-### To explore the code and see the project in action, visit the following link:
+![Images 3 ](assets/3.png)
+
+#### - createCanvas(windowWidth, windowHeight) creates a canvas that spans the entire width and height of the browser window.
+#### - createGraphics(500, 400) creates an off-screen graphics object (birdMask) with a fixed size of 500x400 pixels.
+#### - drawDove(birdMask) is called to draw the dove shape on this off-screen canvas.
+#### - cloudImage.mask(birdMask) applies the dove shape as a mask on the cloudImage, meaning the cloud image will be visible only in the shape of the dove.
+
 
 
 
