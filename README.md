@@ -25,3 +25,7 @@ The background color is created by the lerpColor() function, which creates a gra
 ## Inspiration
 The visual inspiration for this project came primarily from cloud images and dove shapes. I wanted to combine the soft, flowing feel of the clouds with the serene image of the dove to create an image that is both dynamic and quiet. The dove shape was inspired by minimalist bird designs, while the clouds referenced simple textured cloud images that can be used as mask images.
 
+### Reference section
+1. For the gradient background, I refer to the usage of the lerpColor() function detailed on this page, which creates a gradient effect by linear interpolation. [https://p5js.org/reference/#/p5/lerpColor]
+2. Regarding the star effect, I refer to this website that provides tutorials on how to simulate natural phenomena through programming, in particular how to use the sin() function to simulate the fluctuation and blinking effects found in nature. [https://natureofcode.com/]
+3. for cloud animation, I refer to this YouTube video which shows how to use the sin() and cos() functions to create smooth animation effects, especially for simulating natural elements such as clouds.[https://www.youtube.com/watch?v=K5j68h0zCG0]
