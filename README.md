@@ -6,13 +6,13 @@
 ### 1. Variable Declarations
 
 #### Variable Declarations
-![Images 1](assets/1.png)
+![Images 1][]
 
 ##### cloudImage:This variable will store the image of the clouds.
 ##### birdMask: This is a graphics object (off-screen canvas) used to create the dove shape which will act as a mask on the cloud image.
 ##### xOffset and yOffset: These are used to control the smooth horizontal and vertical movement of the clouds using Perlin noise.
 #### Preloading the Cloud Image
-![Images 2 ](assets/1.png)
+![Images 2 ][]
 
 ## Part 2: Exploring Coding Techniques
 
@@ -27,7 +27,5 @@
 ### To explore the code and see the project in action, visit the following link:
 
 
-[Project Reference Link](https://gist.github.com/NeonBlueWS/fde2da512a61e2c55c00c4b8825f9705)
 
 
-[def]: images/Reference_pic.png
