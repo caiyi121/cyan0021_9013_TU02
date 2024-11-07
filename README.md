@@ -1,8 +1,7 @@
 # Creative coding major project
 
 ## Personal Part: Perlin noise and randomness
-![pigeon Image](assets/clouds.jpg)
-
+![Cloud Image](assets/clouds.jpg)
 
 ### 1. Variable Declarations
 
@@ -44,3 +43,5 @@
 
 Technical reference sources used:
 p5.js. “map() Function.” p5.js Reference.[https://p5js.org/reference/#/p5/map]
+
+[def]: assets/clouds.jpg
