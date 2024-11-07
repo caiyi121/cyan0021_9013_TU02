@@ -27,7 +27,16 @@
 #### - drawDove(birdMask) is called to draw the dove shape on this off-screen canvas.
 #### - cloudImage.mask(birdMask) applies the dove shape as a mask on the cloudImage, meaning the cloud image will be visible only in the shape of the dove.
 
+### 4. Draw Function
+![Images 3 ](.assets/3.png)
 
+![Images 3 ](.assets/Reference_pic.png)
+#### - background(0, 100, 200) sets the background color to a blue shade.
+#### - xMove and yMove are calculated using Perlin noise (noise(xOffset) and noise(yOffset)), which generates smooth, gradual random values for the movement of the cloud image. The map() function maps these values into a desired range for horizontal (-20 to 20) and vertical (-10 to 10) movement.
+#### - xOffset and yOffset are incremented each frame (+= 0.01) to animate the cloud movement smoothly.
+#### - cloudOpacity adjusts the transparency of the cloud image based on the vertical position of the mouse (mouseY). As the mouse moves down the screen, the clouds become more opaque.
+#### - scaleFactor calculates the scaling factor to ensure the dove shape fits proportionally within the canvas size, keeping it centered and scaled correctly.
+#### - image(cloudImage, ...) draws the cloud image on the canvas, with adjustments for opacity, position, and scaling.
 
 
 
