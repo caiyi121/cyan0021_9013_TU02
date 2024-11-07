@@ -115,5 +115,5 @@ class Star {
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
-
+  
 
