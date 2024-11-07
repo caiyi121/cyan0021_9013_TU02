@@ -73,5 +73,5 @@ function drawDove(pg) {
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
-D
+
 
