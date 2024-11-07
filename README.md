@@ -34,14 +34,14 @@
 #### - image(cloudImage, ...) draws the cloud image on the canvas, with adjustments for opacity, position, and scaling.
 
 ### 5. Drawing the Dove Shape
-
+![ Image 5 ](5.png)
 #### -This function draws the dove shape on the pg graphics object (birdMask).
 #### -The dove is drawn using Bezier curves (bezierVertex), which are useful for creating smooth, flowing lines. The coordinates provided in the vertex() and bezierVertex() functions define the shape of the dove's body, wings, head, and tail.
 #### -beginShape() and endShape(CLOSE) start and end the shape, respectively, with CLOSE making sure the path is closed to form a complete dove.
 #### -The tail of the dove is drawn in a separate shape at the end.
 
 ### 6. Handling Window Resize
-
+![ Image 6 ](6.png)
 #### - This function ensures that the canvas size is updated whenever the window is resized, so the sketch will adjust dynamically to fit the new window dimensions.
 
 Technical reference sources used:
