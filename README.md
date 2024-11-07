@@ -1,6 +1,7 @@
 # Creative coding major project
 
 ## Personal Part: Perlin noise and randomness
+![Cloud Image](assets/clouds.jpg)
 
 ### 1. Variable Declarations
 
@@ -40,3 +41,5 @@
 
 #### - This function ensures that the canvas size is updated whenever the window is resized, so the sketch will adjust dynamically to fit the new window dimensions.
 
+Technical reference sources used:
+p5.js. “map() Function.” p5.js Reference.[https://p5js.org/reference/#/p5/map]
