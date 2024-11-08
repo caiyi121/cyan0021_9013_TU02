@@ -18,18 +18,24 @@ The random movement of the text is based on sine and cosine functions that allow
 For this project, my main focus was on the "Peace" text animation, including its movement, fading, and interactive behavior. Other team members may have focused on elements such as background effects, further interactivity, or additional text animations. Each of us contributed different features to enhance the overall dynamic of the animation.
 
 ## Three iterations of changes
-！[IM]
+
+
 ### Iteration 1: Basic Setup without Text
+![Image 1](1.png)
 In the first iteration, the animation was focused on creating a basic visual environment without introducing the "Peace" text. I set up the time-based effects, including the background gradient and the initial setup for the cloud-like movement using sine and cosine functions. The focus was on establishing the dynamic background and preparing the framework for later additions.
-#### Improvement Point: 
+#### Improvement Point
 While the background was visually appealing, the absence of interactive text made the scene feel static and unengaging for the user.
 
+
 ### Iteration 2 : Adding "Peace" Text
+![Image 2](2.png)
 In the second iteration, I introduced the "Peace" text to the animation. The text appears at the position of the mouse click and fades out gradually. This added the first layer of interactivity, allowing the user to create personalized text that would appear and disappear based on their clicks. The fade effect was applied by modifying the alpha transparency of the text, and its position remained static after appearing.
-#### Improvement Point: 
+
+#### Improvement Point
 The "Peace" text provided interactivity, but its lack of movement beyond fading made it feel slightly static and could be more dynamic in its interaction with the background.
 
 ### Iteration 3 : Floating "Peace" Text with Enhanced Movement
+![Image 3](3.png)
 In the third iteration, I introduced more dynamic movement to the "Peace" text. The text now not only fades out but also moves randomly in both horizontal and vertical directions using sin() and cos() functions. This gives the text a floating effect, making it feel more alive and interactive. The floating movement combined with the fading creates a more immersive and engaging experience for the user.
 
 #### Improvements
