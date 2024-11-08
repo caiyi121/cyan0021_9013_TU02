@@ -123,15 +123,18 @@ class PeaceText {
     this.x = x;
     this.y = y;
     this.alpha = 255; // Start fully opaque
+    this.size = random(30, 60); // Randomize the font size
   }
 
   update() {
     this.alpha -= 2; // Gradually fade out
+    this.x += random(-1, 1); // Make the "Peace" text move slightly horizontally
+    this.y += random(-1, 1); // Make the "Peace" text move slightly vertically
   }
 
   show() {
     textAlign(CENTER, CENTER);
-    textSize(50);
+    textSize(this.size);
     fill(255, this.alpha); // White text with current opacity
     textFont("Georgia"); // Elegant font for "Peace"
     text("Peace", this.x, this.y);
@@ -142,8 +145,8 @@ class PeaceText {
   }
 }
 
-// Mouse pressed event to add "Peace" text at click position
-function mousePressed() {
+// Mouse moved event to add "Peace" text at mouse position
+function mouseMoved() {
   peaceTexts.push(new PeaceText(mouseX, mouseY));
 }
 
