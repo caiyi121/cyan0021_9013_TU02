@@ -41,7 +41,7 @@ The "Peace" text provided interactivity, but its lack of movement beyond fading 
 
 In the third iteration, I introduced more dynamic movement to the "Peace" text. The text now not only fades out but also moves randomly in both horizontal and vertical directions using sin() and cos() functions. This gives the text a floating effect, making it feel more alive and interactive. The floating movement combined with the fading creates a more immersive and engaging experience for the user.
 
-#### Improvements
+#### Improvement Point
 The "Peace" text now behaves more dynamically with smoother movement, adding a sense of liveliness and interaction. The background was further enhanced with richer color transitions, making the overall experience feel layered and immersive.
 
 #### Reference section
